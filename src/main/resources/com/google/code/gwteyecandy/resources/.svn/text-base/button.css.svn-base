@@ -1,0 +1,195 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+.btn {
+	border-width: 0;
+	background: none repeat scroll 0 0 transparent;
+	display: inline-block;
+	cursor: default;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+
+a.btn:hover {
+	text-decoration: none;
+}
+
+div.outer {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	min-width: 1px;
+	text-align: left;
+	z-index: 0;
+}
+
+div.border {
+	border-top: 1px solid #bbbbbb;
+	mid-width: 100%;
+	margin: 0 1px;
+	padding: 0;
+}
+
+.toolbar div.border {
+	border-top: none;
+	padding-top: 1px;
+}
+
+.noleft div.border {
+	margin-left: 0;
+}
+
+.noright div.border {
+	margin-right: 0;
+}
+
+div.inner {
+	background: #f9f9f9;
+	padding: 0;
+	margin: 0;
+	border-left: 1px solid #bbbbbb;
+	border-right: 1px solid #bbbbbb;
+}
+
+.toolbar div.inner {
+	background: none;
+	border-style: none;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+.noleft div.inner {
+	border-left-style: none;
+}
+
+a.enabled:hover div.border, 
+a.enabled:hover div.inner, 
+a.enabled:focus div.border, 
+a.enabled:focus div.inner,
+a.hover div.border, 
+a.hover div.inner,
+.toolbar.enabled a.pressed div.border,
+.toolbar.enabled a.pressed div.inner {
+	border-color: #729bd1;
+}
+
+.toolbar a.pressed div.border,
+.toolbar a.pressed div.inner {
+	border-color: #bbbbbb;
+}
+
+.toolbar a.enabled:hover div.border, 
+.toolbar a.enabled:focus div.border, 
+.toolbar a.pressed div.border {
+	border-top-width: 1px;
+	border-top-style: solid;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.toolbar a.enabled:hover div.inner, 
+.toolbar a.enabled:focus div.inner,
+.toolbar a.hover div.inner,
+.toolbar a.pressed div.inner {
+	padding-left: 0;
+	padding-right: 0;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-right-width: 1px;
+	border-right-style: solid;
+}
+
+a.enabled:active div.inner, a.pressed div.inner {
+	background-color: #e3e3e3;
+}
+
+
+div.upper {
+	position: absolute;
+	z-index: 1;
+	bottom: 1px;
+	right: 1px;
+	left: 1px;
+	height: 40%;
+	background-color: #e3e3e3;
+	border-top: 3px solid #eeeeee;
+}
+
+.toolbar div.upper {
+	background-color: transparent;
+	border-top: none;
+}
+
+a.enabled:active div.upper, a.pressed div.upper {
+	background-color: #f9f9f9;
+}
+
+.toolbar a.enabled:active div.upper, .toolbar a.pressed div.upper {
+	background-color: #e3e3e3;
+} 
+
+div.filler {
+	position: relative;
+	z-index: 2;
+	margin: 0;
+	padding: 1px 7px;
+	font-family: arial, sans-serif;
+	font-size: 12px;
+	line-height: 1.4em;
+	text-decoration: none;
+	color: #808080;
+}
+
+a.enabled div.filler {
+	color: #000;
+}
+
+div.filler .icon {
+	vertical-align: middle;
+}
+
+.disabled {
+	opacity: 0.5;
+}
+
+.disabledIE8 {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=50)";
+}
+
+.disabledIE6 {
+	filter:"alpha(opacity=50)";
+}
+
+div.filler span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.bar {
+	clear: both
+}
+
+.bar a.btn {
+	float: left;
+}
+
+@sprite .toolbar {
+	gwt-image: "toolbarbg";
+	text-align: left;
+	padding: 3px 3px 1px 3px;
+	background-color: #f9f9f9;
+	background-position: bottom;
+}
+
