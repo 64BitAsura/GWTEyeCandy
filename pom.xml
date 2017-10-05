@@ -8,7 +8,7 @@
 	</parent>
 	<groupId>com.google.code.gwt-eye-candy</groupId>
 	<artifactId>gwt-eye-candy</artifactId>
-	<version>0.3</version>
+	<version>0.3.1</version>
 	<packaging>jar</packaging>
 	<name>GWT Eye Candy</name>
 	<description>Good looking GWT widgets</description>
